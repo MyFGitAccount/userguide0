@@ -240,5 +240,5 @@ Questions? Contact your university admin or platform maintainer.
 
 **Happy studying with EFS!** 🚀
 
-Made with ❤️ by [Your Name / Team]  
-Repository: https://github.com/[your-username]/efs-platform  
+Made with ❤️ by Some random guy from internet  
+Repository: https://github.com/MyFGitAccount/platform-efs  
