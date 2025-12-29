@@ -1,234 +1,244 @@
 # EFS Platform User Guide
 
-Welcome to the EFS (Educational Facilitation System) Platform! This guide provides step-by-step instructions on how to use the platform's features. EFS is designed to enhance your learning experience by offering tools for timetable planning, group formation, questionnaire exchanges, access to learning materials, course browsing, and more.
+**Educational Facilitation System**  
+*Last updated: December 29, 2025*
 
-This guide is structured by feature, starting from account creation and login. If you're an administrator, refer to the dedicated Admin Features section at the end.
+Welcome to **EFS** — a student-centric platform designed to make university life easier with smart tools for timetable planning, group formation, questionnaire exchange, course materials, and more.
+
+---
+
+## Table of Contents
+
+- [1. Introduction](#1-introduction)
+- [2. Getting Started](#2-getting-started)
+  - [2.1 Creating an Account](#21-creating-an-account)
+  - [2.2 Logging In](#22-logging-in)
+  - [2.3 Logging Out](#23-logging-out)
+- [3. Dashboard](#3-dashboard)
+- [4. Timetable Planner (Calendar)](#4-timetable-planner-calendar)
+- [5. Study Group Formation](#5-study-group-formation)
+- [6. Questionnaire Exchange](#6-questionnaire-exchange)
+- [7. Learning Materials](#7-learning-materials)
+- [8. Course Catalog](#8-course-catalog)
+- [9. My Profile](#9-my-profile)
+- [10. Admin Features](#10-admin-features)
+  - [10.1 Admin Panel](#101-admin-panel)
+  - [10.2 Course Editor](#102-course-editor)
+- [Troubleshooting & Notes](#troubleshooting--notes)
 
 ---
 
 ## 1. Introduction
 
 ### What is EFS?
-EFS is an educational platform for students and administrators. Key features include:
-- **Timetable Planner**: Build and export your course schedule.
-- **Group Formation**: Find study partners based on majors, GPA, and preferences.
-- **Questionnaire Exchange**: Post and fill questionnaires to earn credits.
-- **Learning Materials**: Access and upload course resources.
-- **Course Catalog**: Browse courses, view details, and request new ones.
-- **Dashboard**: Overview of your stats and quick actions.
-- **Profile**: Manage personal information.
-- **Admin Tools**: Approve accounts/courses, manage users, and edit courses (admin-only).
 
-### Key Concepts
-- **Credits**: Earned by filling questionnaires (1 credit each) or added by admins. Used to post questionnaires (3 credits each).
-- **Roles**: Students (default) and Admins (with extra privileges).
-- **Approvals**: New accounts and course requests require admin approval.
+EFS is a comprehensive educational platform that helps students:
+
+- Plan timetables without conflicts  
+- Find study group members  
+- Exchange questionnaire responses for credits  
+- Access & share course materials  
+- Browse and request new courses  
+- Manage personal profile & academic info  
+
+**Key Concepts**
+
+| Concept          | Description                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| **Credits**      | Currency of the platform. Earn 1 credit by filling questionnaires, spend 3 to post one |
+| **Roles**        | Student (default) / Admin (extra privileges)                                |
+| **Approval Flow**| New accounts & new course requests require admin approval                  |
 
 ---
 
 ## 2. Getting Started
 
 ### 2.1 Creating an Account
-1. Navigate to the registration page (usually `/register` or linked from the login page).
-2. Fill in the form:
-   - **Student ID (SID)**: Your unique student identifier (e.g., 12345678).
-   - **Email**: Your student email (e.g., student@example.com).
-   - **Password**: At least 6 characters. Confirm it in the next field.
-   - **Student Card Photo**: Upload a clear image of your student ID card (max 5MB, required for verification).
-3. Submit the form. You'll see a success message: "Account Request Submitted! Your account request has been sent for admin approval."
-4. Wait for admin approval via email. Once approved, you can log in.
 
-**Note**: If the photo is too large or invalid, you'll get an error. Accounts are pending until approved.
+1. Go to **Register** (usually linked from login page)
+2. Fill in:
+   - Student ID (SID)
+   - Email (student email)
+   - Password (min. 6 characters)
+   - **Student ID Card Photo** (clear image, max 5MB — **required**)
+3. Submit → You'll see:  
+   *"Account Request Submitted! Waiting for admin approval."*
+4. Wait for email confirmation from admin
+
+> **Tip**: Use a clear, well-lit photo of your student card — blurry images may be rejected.
 
 ### 2.2 Logging In
-1. Go to the login page (`/login`).
-2. Enter your **Email**, **Student ID (SID)**, and **Password**.
-3. Click "Login".
-4. If successful, you'll be redirected to the Dashboard. Errors (e.g., invalid credentials) will display above the button.
 
-**Forgot Password?** (Not implemented in the provided code—contact support if needed.)
+1. Go to **Login**
+2. Enter:
+   - Email
+   - Student ID
+   - Password
+3. Click **Login**
+
+Successful login → redirected to **Dashboard**
 
 ### 2.3 Logging Out
-From any page, click the "Logout" button in the top navigation bar (next to your SID and role).
+
+Click the **Logout** button in the top-right corner (next to your SID & credits).
 
 ---
 
 ## 3. Dashboard
 
-The Dashboard is your home page after login (`/dashboard`).
+Your personal homepage after login.
 
-### Features
-- **Welcome Message**: Greets you by SID.
-- **Stats Grid**:
-  - Your Credits: Available balance.
-  - Total Courses: Platform-wide courses.
-  - Group Requests: Your active group formation requests.
-  - Questionnaires: Your created questionnaires.
-- **Quick Actions**: Links to key features (e.g., Timetable Planner, Group Formation). Icons and descriptions guide you.
-- **Recent Activity**: Lists recent events (e.g., "Welcome to EFS Platform!").
-- **Admin Alert** (Admins only): Shows pending approvals with a link to the Admin Panel.
+### What you'll see
 
-**Tips**: If data fails to load, click "Retry". Use the sidebar menu to navigate.
+- Welcome message with your SID
+- Quick stats:
+  - Your current **credits**
+  - Total courses on platform
+  - Your active group requests
+  - Your questionnaires
+- **Quick Actions** cards (shortcuts to main features)
+- Recent activity feed
+- **Admin only**: Pending approval alerts
 
 ---
 
 ## 4. Timetable Planner (Calendar)
 
-Access via sidebar: "📅 Timetable Planner" (`/calendar`).
+**Path:** Sidebar → 📅 Timetable Planner
 
-### Features
-- **Course Selection**: Toggle courses from the list to add/remove from your timetable.
-- **Timetable View**: Displays a weekly grid (Mon-Sat) with time slots. Selected courses appear as colored blocks with details (code, time, room).
-- **Conflict Detection**: Highlights overlapping courses with details (e.g., day, time, campuses).
-- **Stats**: Total courses, conflicts, and credits (assuming 3 per course).
-- **Actions**:
-  - Save Timetable: Saves to your account (login required).
-  - Export as PNG: Downloads the timetable as an image.
+### Main features
 
-**How to Use**:
-1. Select courses from the sidebar list.
-2. View the timetable and check for conflicts.
-3. Save or export as needed.
+- Select courses from available list
+- Visual weekly timetable (color-coded blocks)
+- **Automatic conflict detection** (shows overlapping courses + campuses)
+- Statistics: total courses, conflicts, estimated credits
+- **Save** your timetable
+- **Export** as PNG image
 
-**Note**: Courses are fetched from the platform. Conflicts consider weekday and time overlaps.
+> **Pro tip**: Check conflicts before saving — red warnings help you avoid timetable disasters!
 
 ---
 
-## 5. Group Formation
+## 5. Study Group Formation
 
-Access via sidebar: "👥 Group Formation" (`/group-formation`).
+**Path:** Sidebar → 👥 Group Formation
 
-### Features
-- **My Group Request**: View/edit/delete your request. Includes major, description, desired groupmates, GPA, etc.
-- **Create/Edit Request**:
-  - Fill form: Major (required), Description, Email (required), Phone, Desired Groupmates, GPA, DSE Score.
-  - Submit to post or update.
-- **Browse Requests**: Search by major/description. View others' requests with details.
-- **Contact**: Send a message to invite someone (prompts for your message).
+### How it works
 
-**How to Use**:
-1. Create a request if none exists.
-2. Search and browse others' requests.
-3. Click "Contact" to send an invitation.
-
-**Note**: Your own request can't be contacted. Deletions are permanent.
+1. **Create your request** (or edit existing one)
+   - Major (required)
+   - Description
+   - Contact info (email required)
+   - Desired groupmates
+   - Optional: GPA, DSE score
+2. **Browse** other students' requests
+3. Use **search** (major/description)
+4. Click **Contact** to send invitation message
 
 ---
 
 ## 6. Questionnaire Exchange
 
-Access via sidebar: "📝 Questionnaire Exchange" (`/questionnaire`).
+**Path:** Sidebar → 📝 Questionnaire Exchange
 
-### Features
-- **Stats**: Your credits, available questionnaires to fill, your created ones.
-- **Post Questionnaire** (Costs 3 credits):
-  - Description (required), Google Form Link (required), Target Responses (default 30).
-  - Submit if you have enough credits.
-- **My Questionnaires**: List with responses, status (e.g., active), view link, and delete button.
-- **Fill Questionnaires** (Earn 1 credit each):
-  - Browse list with creator, responses, description, and link.
-  - Open the link, fill it externally, then click "Fill & Earn 1 Credit".
+### Credit economy
 
-**How to Use**:
-1. Post a new one if needed (check credits).
-2. Fill others' by opening the link and confirming.
-3. Manage your own via the sidebar.
+- **Post** a questionnaire → costs **3 credits**
+- **Fill** someone else's → earn **1 credit**
 
-**Note**: You can't fill your own. Target responses track progress.
+### Actions
+
+- See your credits & stats
+- Post new questionnaire (description + Google Form link)
+- View your own questionnaires (progress, delete)
+- Browse & fill others' questionnaires → earn credits
+
+> Important: You must actually fill the form before claiming the credit!
 
 ---
 
 ## 7. Learning Materials
 
-Access via sidebar: "📚 Learning Materials" (`/materials`).
+**Path:** Sidebar → 📚 Learning Materials
 
-### Features
-- **Select Course**: Dropdown to choose a course.
-- **View Materials**: Grid of cards with name, description, size, downloads, uploaded by.
-- **Download**: Click to download a file.
-- **Upload** (Admins only): Choose file, name, description, and submit.
+### Workflow
 
-**How to Use**:
-1. Select a course from the sidebar.
-2. Browse materials.
-3. Download as needed.
-4. (Admins) Upload new ones via the form.
-
-**Note**: No materials? It shows a message. Uploads are course-specific.
+1. Select course from dropdown
+2. View list of materials (name, size, downloads, description)
+3. **Download** files
+4. **Admins only**: Upload new materials
 
 ---
 
-## 8. Course Catalog (Course Viewer)
+## 8. Course Catalog
 
-Access via sidebar: "🎓 Course Catalog" (`/courses`).
+**Path:** Sidebar → 🎓 Course Catalog
 
 ### Features
-- **Search Courses**: Filter by code/title.
-- **Course List**: Click to view details.
-- **Details View**: Description, timetable (table with day/time/room/class no), materials (list with download links).
-- **Actions**: Add to Timetable (links to Calendar).
-- **Request New Course**: Enter code and title, submit for admin approval.
 
-**How to Use**:
-1. Search or browse courses.
-2. Click for details.
-3. Request new ones if missing.
-
-**Note**: Timetable and materials may be empty if not set.
+- Search by code or title
+- View detailed course info:
+  - Description
+  - Timetable table
+  - Available materials (with download)
+- **Request new course** (code + title) → waits for admin approval
+- Quick button: **Add to Timetable**
 
 ---
 
-## 9. Profile Management
+## 9. My Profile
 
-Access via sidebar: "👤 My Profile" (`/profile`).
+**Path:** Sidebar → 👤 My Profile
 
-### Features
-- **View Mode**: Shows photo, SID, email, role, credits, contact info, academic details (major, year, GPA, DSE), skills (tags), about me, account dates.
-- **Edit Mode**: Update email, phone, major, GPA, DSE score, skills (comma-separated), year of study, about me.
-- **Photo**: Upload/change (preview shown).
+### You can update:
 
-**How to Use**:
-1. Click "Edit Profile" to enter edit mode.
-2. Update fields and submit.
-3. Cancel to revert.
+- Contact: email, phone
+- Academic: major, year of study, GPA, DSE score
+- Skills (comma separated)
+- About me text
 
-**Note**: Some fields (e.g., SID) are read-only.
+Photo change is supported but currently limited in UI.
 
 ---
 
 ## 10. Admin Features
 
-Access via sidebar: "⚙️ Admin Panel" (`/admin`) (Admins only).
-
 ### 10.1 Admin Panel
-- **Tabs**: Accounts (pending), Courses (pending), Users (all), Stats.
-- **Pending Accounts**: View SID, email, photo. Approve/Reject.
-- **Pending Courses**: View code, title. Approve/Reject.
-- **All Users**: Table with SID, email, role, credits, created date. Add credits or delete (except admins).
-- **Stats**: Cards for total users, courses, pending items, materials.
 
-**How to Use**: Switch tabs, perform actions (confirm prompts appear).
+**Path:** Sidebar → ⚙️ Admin Panel
+
+Tabs:
+- **Pending Accounts** — approve/reject new users (+ see student card)
+- **Pending Courses** — approve/reject new course requests
+- **All Users** — manage credits, delete users
+- **Statistics** — overview of platform usage
 
 ### 10.2 Course Editor
-Access via sidebar (if available) or quick actions: `/course-editor`.
 
-- **Course List**: Select a course.
-- **View/Edit**: Toggle edit mode.
-- **Edit Form**: Update code, title, description. Add/remove timetable sessions (day, time, room, class no).
-- **Save**: Submits changes.
+**Path:** /course-editor (may be linked from admin panel)
 
-**How to Use**:
-1. Select course.
-2. Edit and add sessions.
-3. Save.
-
-**Note**: Access denied for non-admins.
+- Select existing course
+- Edit basic info (code, title, description)
+- Manage timetable sessions (add/remove)
+- Save changes
 
 ---
 
-## Troubleshooting
-- **Errors**: Check console or retry fetches.
-- **No Internet Features**: Some tools (e.g., external links) require browser permissions.
-- **Contact Support**: For issues like forgotten passwords or bugs.
+## Troubleshooting & Notes
 
-This guide is based on the EFS platform's frontend code. For backend details or updates, refer to the source repository. If you need expansions or screenshots, let us know!
+| Problem                                | Possible Solution                                      |
+|----------------------------------------|--------------------------------------------------------|
+| Can't login                            | Account still pending approval? Check email.           |
+| Photo upload fails                     | File > 5MB or not an image? Try smaller/clearer photo  |
+| No courses/materials appear            | New platform? Wait for admin to add content            |
+| Questionnaire credit not awarded       | Make sure you actually filled the form                 |
+| Want a new course                      | Use Course Catalog → Request new course                |
+
+Questions? Contact your university admin or platform maintainer.
+
+---
+
+**Happy studying with EFS!** 🚀
+
+Made with ❤️ by [Your Name / Team]  
+Repository: https://github.com/[your-username]/efs-platform  
