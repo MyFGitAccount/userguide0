@@ -20,12 +20,6 @@ The branch with an asterisk (`*`) is the one you’re currently on.
 git switch platform-efs2-dirty-branch
 ```  
 
-If the branch does not exist locally, create and switch to it:
-
-```bash
-git checkout -b platform-efs2-dirty-branch origin/platform-efs2-dirty-branch
-```
-
 ---  
 
 ## 3️ Make Changes & Stage Files  
@@ -33,8 +27,7 @@ git checkout -b platform-efs2-dirty-branch origin/platform-efs2-dirty-branch
 Edit your files as needed, then stage the changes:
 
 ```bash
-git add <file‑path>          # stage a specific file
-git add .                    # stage all modified files
+git add <file>          # stage a specific file
 ```
 
 ---  
@@ -77,8 +70,7 @@ A **pull request** is a request to merge changes from one branch (e.g., `platfor
 |----------------------------|-----------------------------------------------------------------------------|
 | View current branch        | `git branch`                                                                |
 | Switch to existing branch  | `git switch platform-efs2-dirty-branch`                                     |
-| Create & switch new branch | `git checkout -b platform-efs2-dirty-branch origin/platform-efs2-dirty-branch` |
-| Stage changes              | `git add <file>` or `git add .`                                             |
+| Stage changes              | `git add <file>`                                             |
 | Commit                     | `git commit -m "Your message"`                                              |
 | Push to remote             | `git push origin platform-efs2-dirty-branch`                                |
 | Open a PR (GitHub UI)      | Click **Compare & pull request** → fill details → **Create pull request**   |
